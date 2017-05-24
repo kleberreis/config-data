@@ -2,7 +2,7 @@
 spring:
         profiles: adjective
         application:
-                name: eureka-client${spring.profiles.active}            
+                name: eureka-client-${spring.profiles.active}
 words: reasonable,leaky,suspicious,ordinary,unlikely
 eureka:
         client:
@@ -12,7 +12,7 @@ eureka:
 spring:
         profiles: article
         application:
-                name: eureka-client${spring.profiles.active}        
+                name: eureka-client-${spring.profiles.active}
 words: a,the
 eureka:
         client:
@@ -22,7 +22,7 @@ eureka:
 spring:
         profiles: noun
         application:
-                name: eureka-client${spring.profiles.active}        
+                name: eureka-client-${spring.profiles.active}
 words: boat,book,vote,seat,backpack,partition,groundhog
 eureka:
         client:
@@ -32,7 +32,7 @@ eureka:
 spring:
         profiles: subject
         application:
-                name: eureka-client${spring.profiles.active}        
+                name: eureka-client-${spring.profiles.active}
 words: I,You,He,She,It
 eureka:
         client:
@@ -42,7 +42,7 @@ eureka:
 spring:
         profiles: verbs
         application:
-                name: eureka-client${spring.profiles.active}        
+                name: eureka-client-${spring.profiles.active}       
 words: ran,knew,had,saw,bought
 eureka:
         client:
