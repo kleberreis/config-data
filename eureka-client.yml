@@ -5,9 +5,11 @@ spring:
                 name: eureka-client-${spring.profiles.active}
 words: reasonable,leaky,suspicious,ordinary,unlikely
 eureka:
+        instance: 
+                instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
         client:
                 serviceUrl:
-                        defaultZone: http://localhost:8010/eureka/
+                        defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 ---
 spring:
         profiles: article
@@ -15,9 +17,11 @@ spring:
                 name: eureka-client-${spring.profiles.active}
 words: a,the
 eureka:
+        instance: 
+                instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
         client:
                 serviceUrl:
-                        defaultZone: http://localhost:8010/eureka/
+                        defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 ---
 spring:
         profiles: noun
@@ -25,9 +29,11 @@ spring:
                 name: eureka-client-${spring.profiles.active}
 words: boat,book,vote,seat,backpack,partition,groundhog
 eureka:
+        instance: 
+                instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
         client:
                 serviceUrl:
-                        defaultZone: http://localhost:8010/eureka/
+                        defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 ---
 spring:
         profiles: subject
@@ -35,9 +41,11 @@ spring:
                 name: eureka-client-${spring.profiles.active}
 words: I,You,He,She,It
 eureka:
+        instance: 
+                instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
         client:
                 serviceUrl:
-                        defaultZone: http://localhost:8010/eureka/
+                        defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 ---
 spring:
         profiles: verbs
@@ -45,6 +53,8 @@ spring:
                 name: eureka-client-${spring.profiles.active}       
 words: ran,knew,had,saw,bought
 eureka:
+        instance: 
+                instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
         client:
                 serviceUrl:
-                        defaultZone: http://localhost:8010/eureka/
+                        defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
