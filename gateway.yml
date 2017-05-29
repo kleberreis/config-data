@@ -3,15 +3,15 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
+      defaultZone: http://localhost:8010/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
 
 # Zuul-proxied services can be found by calling /services/subject, /services/verb, etc.
 zuul:
   prefix: /services
   routes:
     subject:
-      path: /subject/**
-      serviceId: EUREKA-CLIENT-SUBJECT
+          path: /subject/**
+          serviceId: EUREKA-CLIENT-SUBJECT
     verb:
           path: /verb/**
           serviceId: EUREKA-CLIENT-VERBS
