@@ -1,0 +1,26 @@
+---
+# Discovery Client configuration
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/,http://localhost:8011/eureka/,http://localhost:8012/eureka/,http://localhost:8013/eureka/
+
+# Zuul-proxied services can be found by calling /services/subject, /services/verb, etc.
+zuul:
+  prefix: /services
+  routes:
+    subject:
+      path: /subject/**
+      serviceId: EUREKA-CLIENT-SUBJECT
+    verb:
+          path: /verb/**
+          serviceId: EUREKA-CLIENT-VERBS
+    article:
+          path: /article/**
+          serviceId: EUREKA-CLIENT-ARTICLE
+    adjective:
+          path: /adjective/**
+          serviceId: EUREKA-CLIENT-ADJECTIVE
+    noun:
+          path: /noun/**
+          serviceId: EUREKA-CLIENT-NOUN
